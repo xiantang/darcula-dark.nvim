@@ -14,7 +14,7 @@ lazy install
 {
 	"xiantang/darcula-dark.nvim",
 	dependencies = {
-		"nvim-treesitter",
+		"nvim-treesitter/nvim-treesitter",
 	},
 }
 ```
