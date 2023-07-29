@@ -16,6 +16,9 @@ M.setup = function(args)
   if vim.g.colors_name ~= nil then
     vim.cmd("highlight clear")
   end
+  -- check treesitter highlight is enabled
+  vim.cmd("TSEnable highlight")
+
   -- neovim version should be higher than 0.8.3
   if vim.fn.has("nvim-0.8.3") == 0 then
     vim.cmd(
