@@ -14,16 +14,26 @@ Installation
 
 To install this color scheme, add the following to your plugin configuration:
 
-lazy install
+lazy.nvim
 
 ```lua
 {
 	"xiantang/darcula-dark.nvim",
 	dependencies = {
-		"nvim-treesitter/nvim-treesitter",
-	},
+		"nvim-treesitter/nvim-treesitter", },
 }
 ```
+
+packer.nvim
+
+```lua
+  use {
+    'xiantang/darcula-dark.nvim',
+    requires = {"nvim-treesitter/nvim-treesitter"}
+  }
+
+```
+
 
 Usage
 ------------
