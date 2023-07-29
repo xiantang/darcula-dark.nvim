@@ -18,6 +18,22 @@ lazy install
 	},
 }
 ```
+
+Usage
+------------
+
+
+```lua
+vim.cmd.colorscheme("darcula-dark")
+
+```
+
+
+```vimscript
+colorscheme darcula-dark
+```
+
+
 Requirements
 ------------
 
