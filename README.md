@@ -44,6 +44,15 @@ Requirements
 
 This color scheme requires Neovim v0.8.3 or higher, as it uses LSP Semantic tokens. It also depends on nvim-treesitter/nvim-treesitter.
 
+
+Alternatives
+------------
+
+-  [doums/darcula](https://github.com/doums/darcula)
+-  [santos-gabriel-dario/darcula-solid.nvim](https://github.com/santos-gabriel-dario/darcula-solid.nvim)
+
+
+
 Credits
 -------
 
