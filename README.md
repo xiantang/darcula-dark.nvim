@@ -9,6 +9,7 @@ Installation
 To install this color scheme, add the following to your plugin configuration:
 
 lazy install
+
 ```lua
 {
 	"xiantang/darcula-dark.nvim",
