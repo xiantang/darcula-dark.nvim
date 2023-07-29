@@ -49,3 +49,4 @@ Credits
 
 -   [Darcula Darker Theme from JetBrains](https://plugins.jetbrains.com/plugin/12692-darcula-darker-theme)
 -   [Neovim Plugin Template by ellisonleao](https://github.com/ellisonleao/nvim-plugin-template)
+-   [nvim-base16](https://github.com/RRethy/nvim-base16)
