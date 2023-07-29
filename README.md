@@ -19,8 +19,9 @@ lazy.nvim
 ```lua
 {
 	"xiantang/darcula-dark.nvim",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter", },
+    dependencies = {
+        "nvim-treesitter/nvim-treesitter",
+    },
 }
 ```
 
