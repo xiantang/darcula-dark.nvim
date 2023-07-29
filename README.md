@@ -1,47 +1,29 @@
-# A Neovim Plugin Template
+Darcula Dark for NeoVim
+=======================
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/ellisonleao/nvim-plugin-template/default.yml?branch=main&style=for-the-badge)
-![Lua](https://img.shields.io/badge/Made%20with%20Lua-blueviolet.svg?style=for-the-badge&logo=lua)
+The Darcula Dark theme is a NeoVim colorscheme that's designed to emulate the popular Darcula color scheme from JetBrains' GoLand IDE. It is ideal for long hours of coding, offering a dark theme that's easy on the eyes. Despite trying various alternatives in NeoVim, we found nothing quite matched up, hence we embarked on creating this color scheme ourselves.
 
-A template repository for Neovim plugins.
+Installation
+------------
 
-## Using it
+To install this color scheme, add the following to your plugin configuration:
 
-Via `gh`:
+luaCopy code
 
-```
-$ gh repo create my-plugin -p ellisonleao/nvim-plugin-template
-```
+`{
+	"xiantang/darcula-dark.nvim",
+	dependencies = {
+		"nvim-treesitter",
+	},
+},`
 
-Via github web page:
+Requirements
+------------
 
-Click on `Use this template`
+This color scheme requires NeoVim v0.8.3 or higher, as it uses LSP Semantic tokens. It also depends on nvim-treesitter/nvim-treesitter.
 
-![](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
+Credits
+-------
 
-## Features and structure
-
-- 100% Lua
-- Github actions for:
-  - running tests using [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) and [busted](https://olivinelabs.com/busted/)
-  - check for formatting errors (Stylua)
-  - vimdocs autogeneration from README.md file
-  - luarocks release (LUAROCKS_API_KEY secret configuration required)
-
-### Plugin structure
-
-```
-.
-├── lua
-│   ├── plugin_name
-│   │   └── module.lua
-│   └── plugin_name.lua
-├── Makefile
-├── plugin
-│   └── plugin_name.lua
-├── README.md
-├── tests
-│   ├── minimal_init.lua
-│   └── plugin_name
-│       └── plugin_name_spec.lua
-```
+-   [Darcula Darker Theme from JetBrains](https://plugins.jetbrains.com/plugin/12692-darcula-darker-theme)
+-   [NeoVim Plugin Template by ellisonleao](https://github.com/ellisonleao/nvim-plugin-template)
