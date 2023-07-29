@@ -5,6 +5,10 @@ The Darcula Dark theme is a Neovim colorscheme that's designed to emulate the po
 
 ![image](https://user-images.githubusercontent.com/34479567/256968343-f88d8263-76d3-4e2e-a746-8a572d4522ca.png)
 
+comparing with the original Darcula theme in GoLand:
+
+![image](https://user-images.githubusercontent.com/34479567/256969805-1d3f86f1-3692-4267-a113-56a76be67e99.png)
+
 Installation
 ------------
 
