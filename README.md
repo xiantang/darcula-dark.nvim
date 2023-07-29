@@ -23,11 +23,14 @@ Usage
 ------------
 
 
+lua 
+
 ```lua
 vim.cmd.colorscheme("darcula-dark")
 
 ```
 
+vimscript
 
 ```vimscript
 colorscheme darcula-dark
