@@ -1,3 +1,6 @@
+
+![image](https://user-images.githubusercontent.com/34479567/256968343-f88d8263-76d3-4e2e-a746-8a572d4522ca.png)
+
 Darcula Dark for NeoVim
 =======================
 
