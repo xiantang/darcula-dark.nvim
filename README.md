@@ -1,4 +1,4 @@
-Darcula Dark for Neovim
+🧛🏻‍♂️ Darcula Dark for Neovim
 =======================
 
 The Darcula Dark theme is a Neovim colorscheme that's designed to emulate the popular Darcula color scheme from JetBrains' GoLand IDE. It is ideal for long hours of coding, offering a dark theme that's easy on the eyes. Despite trying various alternatives in Neovim, we found nothing quite matched up, hence we embarked on creating this color scheme ourselves.
