@@ -8,15 +8,15 @@ Installation
 
 To install this color scheme, add the following to your plugin configuration:
 
-luaCopy code
-
-`{
+lazy install
+```lua
+{
 	"xiantang/darcula-dark.nvim",
 	dependencies = {
 		"nvim-treesitter",
 	},
-},`
-
+}
+```
 Requirements
 ------------
 
