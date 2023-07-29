@@ -16,6 +16,13 @@ M.setup = function(args)
   if vim.g.colors_name ~= nil then
     vim.cmd("highlight clear")
   end
+  -- neovim version should be higher than 0.8.3
+  if vim.fn.has("nvim-0.8.3") == 0 then
+    vim.cmd(
+      "echohl WarningMsg | echo 'Your neovim version is lower than 0.8.3, some features may not work correctly!' | echohl None"
+    )
+  end
+
   vim.g.colors_name = "darcula-dark"
   vim.o.termguicolors = true
   M.configure_highlights()
