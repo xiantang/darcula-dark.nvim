@@ -667,6 +667,14 @@ M.configure_highlights = function()
   hi(0, "rainbowcol6", { fg = "#b3deef" })
   hi(0, "rainbowcol7", { fg = "#d3b987" })
 
+  hi(0, "@lsp.type.keyword.go", { link = "TSInclude" })
+  hi(0, "Statement", { link = "TSKeyword" })
+  hi(0, "Comment", { link = "TSComment" })
+  hi(0, "Number", { link = "TSNumber" })
+  hi(0, "String", { link = "TSString" })
+  hi(0, "goImportString", { link = "TSString" })
+  hi(0, "@lsp.type.function", { link = "TSMethodCall" })
+  hi(0, "@lsp.type.method", { link = "TSMethod" })
   -- Terminal colors
   local g = vim.g
 
