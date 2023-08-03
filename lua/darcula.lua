@@ -668,6 +668,7 @@ M.configure_highlights = function()
   hi(0, "rainbowcol7", { fg = "#d3b987" })
 
   hi(0, "@lsp.type.keyword.go", { link = "TSInclude" })
+  hi(0, "@lsp.type.string.go", { link = "TSString" })
   hi(0, "Statement", { link = "TSKeyword" })
   hi(0, "Comment", { link = "TSComment" })
   hi(0, "Number", { link = "TSNumber" })
