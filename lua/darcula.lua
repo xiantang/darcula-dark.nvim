@@ -677,6 +677,7 @@ M.configure_highlights = function()
   hi(0, "@lsp.type.function", { link = "TSMethodCall" })
   hi(0, "@lsp.type.method", { link = "TSMethod" })
   hi(0, "goBlock", { link = "TSVariable" })
+  hi(0, "Identifier", { link = "TSKeyword" })
   -- Terminal colors
   local g = vim.g
 
