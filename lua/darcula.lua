@@ -34,6 +34,7 @@ M.configure_highlights = function()
   -- Highlight groups
   local hi = vim.api.nvim_set_hl
 
+  -- lsp semantics token
   hi(0, "@attribute", { link = "TSAttribute" })
   hi(0, "@boolean", { link = "TSBoolean" })
   hi(0, "@character", { link = "TSCharacter" })
@@ -121,38 +122,12 @@ M.configure_highlights = function()
   hi(0, "@lsp.typemod.variable.defaultLibrary", { link = "TSKeyword" })
   hi(0, "@lsp.mod.defaultLibrary.go", { link = "TSKeyword" })
   hi(0, "@lsp.type.property", { link = "TSField" })
+
   hi(0, "Bold", { bold = true })
   hi(0, "Boolean", { fg = "#dc9656" })
-  hi(0, "BufferDefaultCurrent", { ctermfg = 255, fg = "#C9D0D3" })
-  hi(0, "BufferDefaultCurrentERROR", { ctermfg = 15, fg = "#f43753" })
-  hi(0, "BufferDefaultCurrentHINT", { ctermfg = 168, fg = "#d5508f" })
-  hi(0, "BufferDefaultCurrentINFO", { ctermfg = 217, fg = "#ffb7b7" })
-  hi(0, "BufferDefaultCurrentIndex", { ctermfg = 224, fg = "#73cef4" })
-  hi(0, "BufferDefaultCurrentMod", { ctermfg = 224, fg = "#f43753" })
-  hi(0, "BufferDefaultCurrentSign", { ctermfg = 224, fg = "#73cef4" })
-  hi(0, "BufferDefaultCurrentTarget", { bold = true, ctermfg = 9, fg = "#ff0000" })
-  hi(0, "BufferDefaultCurrentWARN", { ctermfg = 224, fg = "#f43753" })
-  hi(0, "BufferDefaultInactive", { bg = "#383838", ctermfg = 102, fg = "#4c4c4c" })
-  hi(0, "BufferDefaultInactiveERROR", { bg = "#383838", ctermfg = 15, fg = "#f43753" })
-  hi(0, "BufferDefaultInactiveHINT", { bg = "#383838", ctermfg = 168, fg = "#d5508f" })
-  hi(0, "BufferDefaultInactiveINFO", { bg = "#383838", ctermfg = 217, fg = "#ffb7b7" })
-  hi(0, "BufferDefaultInactiveIndex", { bg = "#383838", ctermfg = 12, fg = "#4c4c4c" })
-  hi(0, "BufferDefaultInactiveMod", { bg = "#383838", ctermfg = 224, fg = "#f43753" })
-  hi(0, "BufferDefaultInactiveSign", { bg = "#383838", ctermfg = 12, fg = "#4c4c4c" })
-  hi(0, "BufferDefaultInactiveTarget", { bg = "#383838", bold = true, ctermfg = 9, fg = "#ff0000" })
-  hi(0, "BufferDefaultInactiveWARN", { bg = "#383838", ctermfg = 224, fg = "#f43753" })
-  hi(0, "BufferDefaultTabpageFill", { bg = "#383838", ctermfg = 102, fg = "#4c4c4c" })
-  hi(0, "BufferDefaultTabpages", { bg = "#383838", bold = true, ctermfg = 224, fg = "#73cef4" })
-  hi(0, "BufferDefaultVisible", { bg = "#383838", ctermfg = 255, fg = "#c9d05c" })
-  hi(0, "BufferDefaultVisibleERROR", { bg = "#383838", ctermfg = 15, fg = "#f43753" })
-  hi(0, "BufferDefaultVisibleHINT", { bg = "#383838", ctermfg = 168, fg = "#d5508f" })
-  hi(0, "BufferDefaultVisibleINFO", { bg = "#383838", ctermfg = 217, fg = "#ffb7b7" })
-  hi(0, "BufferDefaultVisibleIndex", { bg = "#383838", ctermfg = 255, fg = "#c9d05c" })
-  hi(0, "BufferDefaultVisibleMod", { bg = "#383838", ctermfg = 224, fg = "#f43753" })
-  hi(0, "BufferDefaultVisibleSign", { bg = "#383838", ctermfg = 255, fg = "#c9d05c" })
-  hi(0, "BufferDefaultVisibleTarget", { bg = "#383838", bold = true, ctermfg = 9, fg = "#ff0000" })
-  hi(0, "BufferDefaultVisibleWARN", { bg = "#383838", ctermfg = 224, fg = "#f43753" })
   hi(0, "Character", { fg = "#f43753" })
+
+  -- nvim-cmp
   hi(0, "Pmenu", { bg = "#3C3F40", ctermbg = 13, ctermfg = 0 })
   hi(0, "PmenuSel", { bg = "#4B4E4F", ctermbg = 0, ctermfg = 242 })
   hi(0, "CmpDocumentation", { fg = "#C9D0D3" })
@@ -218,17 +193,25 @@ M.configure_highlights = function()
   hi(0, "Comment", { ctermfg = 14 })
   hi(0, "Conceal", { ctermbg = 242, ctermfg = 7, fg = "#b3deef" })
   hi(0, "Conditional", { fg = "#d3b987" })
+
+  -- conflict-marker.vim
   hi(0, "ConflictMarkerBegin", { bg = "#2f7366" })
   hi(0, "ConflictMarkerCommonAncestorsHunk", { bg = "#754a81" })
   hi(0, "ConflictMarkerEnd", { bg = "#2f628e" })
   hi(0, "ConflictMarkerOurs", { bg = "#2e5049" })
   hi(0, "ConflictMarkerTheirs", { bg = "#344f69" })
   hi(0, "Constant", { ctermfg = 13, fg = "#dc9656" })
+
+  -- copilot.vim
   hi(0, "CopilotSuggestion", { ctermfg = 244, fg = "#808080" })
+
+  -- cursor
   hi(0, "Cursor", { bg = "#eeeeee", fg = "#2B2B2B" })
   hi(0, "CursorColumn", { bg = "#383838", ctermbg = 242 })
   hi(0, "CursorLine", { bg = "#383838" })
   hi(0, "CursorLineNr", { bg = "#383838", bold = true, ctermfg = 11, fg = "#b8b8b8" })
+
+  -- dap.nvim
   hi(0, "DapUIBreakpointsCurrentLine", { bold = true, fg = "#a9ff68" })
   hi(0, "DapUIBreakpointsDisabledLine", { fg = "#424242" })
   hi(0, "DapUIBreakpointsInfo", { fg = "#a9ff68" })
