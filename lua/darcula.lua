@@ -443,6 +443,8 @@ M.configure_highlights = function()
   hi(0, "Structure", { fg = "#d3b987" })
   hi(0, "Substitute", { bg = "#ffc24b", fg = "#383838" })
   hi(0, "SymbolsOutlineConnector", { fg = "#4c4c4c" })
+
+  -- treesitter
   hi(0, "TSAnnotation", { fg = "#a16946" })
   hi(0, "TSAttribute", { fg = "#ffc24b" })
   hi(0, "TSBoolean", { fg = "#dc9656" })
@@ -561,6 +563,8 @@ M.configure_highlights = function()
   hi(0, "gitcommitUntrackedFile", { fg = "#ffc24b" })
   hi(0, "iCursor", { bg = "#4682b4", fg = "#ffffff" })
   hi(0, "lCursor", { bg = "#eeeeee", fg = "#2B2B2B" })
+
+  -- lualine.nvim
   hi(0, "lualine_a_command", { bg = "#98be65", bold = true, fg = "#000000" })
   hi(0, "lualine_a_inactive", { bg = "#abb2bf", bold = true, fg = "#000000" })
   hi(0, "lualine_a_insert", { bg = "#98be65", bold = true, fg = "#000000" })
@@ -642,6 +646,8 @@ M.configure_highlights = function()
   hi(0, "lualine_x_filetype_DevIconDefault_replace", { bg = "#98be65", fg = "#6d8086" })
   hi(0, "lualine_x_filetype_DevIconDefault_terminal", { bg = "#98be65", fg = "#6d8086" })
   hi(0, "lualine_x_filetype_DevIconDefault_visual", { bg = "#98be65", fg = "#6d8086" })
+
+  -- nvim-ts-rainbow
   hi(0, "rainbowcol1", { fg = "#e8e8e8" })
   hi(0, "rainbowcol2", { fg = "#dc9656" })
   hi(0, "rainbowcol3", { fg = "#ffc24b" })
