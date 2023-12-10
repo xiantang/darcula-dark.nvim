@@ -59,6 +59,9 @@ Requirements
 
 This color scheme requires Neovim v0.8.3 or higher, as it uses LSP Semantic tokens. It also depends on nvim-treesitter/nvim-treesitter.
 
+Debug
+------------
+make sure your true color: https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
 
 Alternatives
 ------------
