@@ -443,8 +443,6 @@ M.configure_highlights = function()
   hi(0, "Structure", { fg = "#d3b987" })
   hi(0, "Substitute", { bg = "#ffc24b", fg = "#383838" })
   hi(0, "SymbolsOutlineConnector", { fg = "#4c4c4c" })
-
-  -- treesitter
   hi(0, "TSAnnotation", { fg = "#a16946" })
   hi(0, "TSAttribute", { fg = "#ffc24b" })
   hi(0, "TSBoolean", { fg = "#dc9656" })
@@ -511,6 +509,7 @@ M.configure_highlights = function()
   hi(0, "TabLineSel", { bg = "#383838", fg = "#c9d05c" })
   hi(0, "Tag", { fg = "#ffc24b" })
   hi(0, "TargetFileName", { fg = "#d1d4cf" })
+  -- telescope
   hi(0, "TelescopeBorder", { bg = "#242424", fg = "#242424" })
   hi(0, "TelescopeNormal", { bg = "#242424" })
   hi(0, "TelescopePreviewLine", { bg = "#383838" })

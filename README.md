@@ -36,6 +36,22 @@ packer.nvim
 ```
 
 
+Supported Plugins
+------------
+
+* telescope
+* Treesitter
+* cmp-nvim
+* copilot.vim
+* dap.nvim
+* eyeline.nvim
+* gitsign.nvim
+* hop.nvim
+* nerdtree.vim
+* lspsaga.nvim
+* scrollbar.nvim
+* lualine.nvim
+
 Usage
 ------------
 
