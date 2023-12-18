@@ -35,6 +35,10 @@ packer.nvim
 
 ```
 
+TODO
+------------
+- [ ] support Darcula Solid Theme https://plugins.jetbrains.com/plugin/13920-darcula-solid-theme
+- [ ] support more plugins
 
 Supported Plugins
 ------------
