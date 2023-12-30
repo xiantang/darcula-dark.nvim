@@ -46,6 +46,7 @@ local color = {
   bright_cyan = "#00f1f5",
   light_slate_gray = "#abb2bf",
   dark_grey = "#484848",
+  comment = "#808080",
   light_lime_green = "#a9ff68",
   peach_orange = "#ff9e64",
   slate_gray = "#6d8086",
@@ -60,11 +61,11 @@ local color = {
   bright_yellow_green = "#e3e346",
   copper_brown = "#C07C41",
   deep_fuchsia = "#b33076",
-  _36 = "#F6C87B",
   _37 = "#AD9E7D",
   _38 = "#881515",
   _39 = "#73797e",
   _40 = "#66eeff",
+  _29 = "#51afef",
   _41 = "#666666",
   _42 = "#323232",
   _43 = "#262626",
@@ -284,7 +285,7 @@ M.configure_highlights = function()
   hi(0, "Constant", { ctermfg = 13, fg = color.light_brown })
 
   -- copilot.vim
-  hi(0, "CopilotSuggestion", { ctermfg = 244, fg = color._27 })
+  hi(0, "CopilotSuggestion", { ctermfg = 244, fg = color.comment })
 
   -- cursor
   hi(0, "Cursor", { bg = color.very_light_gray, fg = color.dark })
@@ -532,8 +533,8 @@ M.configure_highlights = function()
   hi(0, "TSAttribute", { fg = color.golden_yellow })
   hi(0, "TSBoolean", { fg = color.light_brown })
   hi(0, "TSCharacter", { fg = color.red })
-  hi(0, "TSComment", { fg = color._27, italic = true })
-  hi(0, "GitSignsCurrentLineBlame", { fg = color._27, italic = true })
+  hi(0, "TSComment", { fg = color.comment, italic = true })
+  hi(0, "GitSignsCurrentLineBlame", { fg = color.comment, italic = true })
   hi(0, "TSConditional", { fg = color._60 })
   hi(0, "TSConstBuiltin", { fg = color.light_brown, italic = true })
   hi(0, "TSMethodCall", { fg = color._37 })
@@ -558,7 +559,7 @@ M.configure_highlights = function()
   hi(0, "TSKeywordOperator", { fg = color.pale_gold })
   hi(0, "TSLabel", { fg = color._63 })
   hi(0, "TSLiteral", { fg = color.light_brown })
-  hi(0, "TSMethod", { fg = color._36 })
+  hi(0, "TSMethod", { fg = color.pale_gold })
   hi(0, "TSNamespace", { fg = color._61 })
   hi(0, "TSNone", { fg = color.grey })
   hi(0, "TSNumber", { fg = color._68 })
@@ -566,7 +567,7 @@ M.configure_highlights = function()
   hi(0, "TSOperator", { fg = color.grey })
   hi(0, "TSParameter", { fg = color.grey })
   hi(0, "TSParameterReference", { fg = color.grey })
-  hi(0, "TSProperty", { fg = color._36 })
+  hi(0, "TSProperty", { fg = color.pale_gold })
   hi(0, "TSPunctBracket", { fg = color.grey })
   hi(0, "TSPunctDelimiter", { fg = color.light_brown })
   hi(0, "TSPunctSpecial", { fg = color.grey })
