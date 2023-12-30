@@ -98,17 +98,13 @@ local color = {
   _70 = "#4dd158",
   _71 = "#4B4E4F",
   _72 = "#4682b4",
-  _73 = "#3bb6c4",
   _74 = "#3C3F40",
   _75 = "#392a52",
   _76 = "#344f69",
   _77 = "#2f7366",
   _78 = "#2f628e",
   _79 = "#2e5049",
-  _80 = "#2b8db3",
-  _81 = "#2ac3de",
   _82 = "#151838",
-  _83 = "#00dfff",
 }
 
 M.configure_highlights = function()
@@ -391,8 +387,8 @@ M.configure_highlights = function()
   hi(0, "GitSignsStagedTopdelete", { bg = color.dark, fg = color.dark_maroon })
   hi(0, "GitSignsStagedTopdeleteNr", { bg = color.dark, fg = color.dark_maroon })
   hi(0, "HopNextKey", { bold = true, ctermfg = 198, fg = color._46 })
-  hi(0, "HopNextKey1", { bold = true, ctermfg = 45, fg = color._83 })
-  hi(0, "HopNextKey2", { ctermfg = 33, fg = color._80 })
+  hi(0, "HopNextKey1", { bold = true, ctermfg = 45, fg = color.bright_cyan })
+  hi(0, "HopNextKey2", { ctermfg = 33, fg = color.bright_cyan })
   hi(0, "HopPreview", { link = "IncSearch" })
   hi(0, "HopUnmatched", { ctermfg = 242, fg = color._41, sp = color._41 })
   hi(0, "Identifier", { ctermfg = 14, fg = color.red })
@@ -433,10 +429,10 @@ M.configure_highlights = function()
   hi(0, "LspSagaFinderSelection", { bold = true, fg = color._64 })
   hi(0, "LspSagaHoverBorder", { fg = color._47 })
   hi(0, "LspSagaLspFinderBorder", { fg = color._29 })
-  hi(0, "LspSagaRenameBorder", { fg = color._73 })
+  hi(0, "LspSagaRenameBorder", { fg = color.bright_cyan })
   hi(0, "LspSagaSignatureHelpBorder", { fg = color.green })
   hi(0, "Macro", { fg = color.red })
-  hi(0, "MatchParen", { fg = color._81, bold = true })
+  hi(0, "MatchParen", { fg = color.bright_cyan, bold = true })
   hi(0, "ModeMsg", { bold = true, fg = color.light_olive_green })
   hi(0, "MoreMsg", { bold = true, ctermfg = 121, fg = color.light_olive_green })
   hi(0, "NERDTreeFile", { fg = color.grey })
