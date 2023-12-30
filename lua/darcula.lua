@@ -59,10 +59,7 @@ local color = {
   steel_blue = "#596f77",
   bright_yellow_green = "#e3e346",
   copper_brown = "#C07C41",
-  _32 = "#ff0000",
-  _33 = "#feffff",
-  _34 = "#d484ff",
-  _35 = "#b33076",
+  deep_fuchsia = "#b33076",
   _36 = "#F6C87B",
   _37 = "#AD9E7D",
   _38 = "#881515",
@@ -309,7 +306,7 @@ M.configure_highlights = function()
   hi(0, "DapUIRestart", { fg = color.light_lime_green })
   hi(0, "DapUIRestartNC", { fg = color.light_lime_green })
   hi(0, "DapUIScope", { fg = color.bright_cyan })
-  hi(0, "DapUISource", { fg = color._34 })
+  hi(0, "DapUISource", { fg = color.light_lavender })
   hi(0, "DapUIStepBack", { fg = color.bright_cyan })
   hi(0, "DapUIStepBackNC", { fg = color.bright_cyan })
   hi(0, "DapUIStepInto", { fg = color.bright_cyan })
@@ -322,7 +319,7 @@ M.configure_highlights = function()
   hi(0, "DapUIStopNC", { fg = color.bright_pink })
   hi(0, "DapUIStoppedThread", { fg = color.bright_cyan })
   hi(0, "DapUIThread", { fg = color.light_lime_green })
-  hi(0, "DapUIType", { fg = color._34 })
+  hi(0, "DapUIType", { fg = color.light_lavender })
   hi(0, "DapUIUnavailable", { fg = color.dark_grey })
   hi(0, "DapUIUnavailableNC", { fg = color.dark_grey })
   hi(0, "DapUIWatchesEmpty", { fg = color.bright_pink })
@@ -365,9 +362,9 @@ M.configure_highlights = function()
   hi(0, "EyelinerPrimary", { fg = color.light_brown })
   hi(0, "EyelinerSecondary", { fg = color.pale_gold })
   hi(0, "FinderParam", { bg = color._75, bold = true, fg = color.light_lavender })
-  hi(0, "FinderSpinner", { bold = true, fg = color._35 })
+  hi(0, "FinderSpinner", { bold = true, fg = color.deep_fuchsia })
   hi(0, "FinderSpinnerBorder", { fg = color._29 })
-  hi(0, "FinderSpinnerTitle", { bold = true, fg = color._35 })
+  hi(0, "FinderSpinnerTitle", { bold = true, fg = color.deep_fuchsia })
   hi(0, "FinderVirtText", { fg = color._52 })
   hi(0, "Float", { fg = color.light_brown })
   hi(0, "FloatBorder", { fg = color.grey })
@@ -497,8 +494,8 @@ M.configure_highlights = function()
     "ScrollbarGitChangeHandle",
     { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color.bright_yellow_green }
   )
-  hi(0, "ScrollbarGitDelete", { ctermfg = 0, fg = color._32 })
-  hi(0, "ScrollbarGitDeleteHandle", { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color._32 })
+  hi(0, "ScrollbarGitDelete", { ctermfg = 0, fg = color.red })
+  hi(0, "ScrollbarGitDeleteHandle", { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color.red })
   hi(0, "ScrollbarHandle", { bg = color.background, ctermbg = 15 })
   hi(0, "ScrollbarHint", { ctermfg = 0, fg = color.bright_sky })
   hi(0, "ScrollbarHintHandle", { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color.bright_sky })
@@ -738,7 +735,7 @@ M.configure_highlights = function()
   hi(0, "rainbowcol1", { fg = color._48 })
   hi(0, "rainbowcol2", { fg = color.light_brown })
   hi(0, "rainbowcol3", { fg = color.golden_yellow })
-  hi(0, "rainbowcol4", { fg = color._33 })
+  hi(0, "rainbowcol4", { fg = color.very_light_gray })
   hi(0, "rainbowcol5", { fg = color.bright_sky })
   hi(0, "rainbowcol6", { fg = color.light_blue })
   hi(0, "rainbowcol7", { fg = color.pale_gold })
@@ -773,7 +770,7 @@ M.configure_highlights = function()
   g.terminal_color_12 = color.light_blue
   g.terminal_color_13 = color.pale_gold
   g.terminal_color_14 = color.bright_sky
-  g.terminal_color_15 = color._33
+  g.terminal_color_15 = color.very_light_gray
 end
 
 return M
