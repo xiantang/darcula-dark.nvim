@@ -84,8 +84,6 @@ local color = {
   _56 = "#afd700",
   _57 = "#ad475f",
   _58 = "#FFC66D",
-  _59 = "#CB7932",
-  _60 = "#C07C42",
   _61 = "#AFBF7E",
   _62 = "#9876AA",
   _63 = "#9377A7",
@@ -531,7 +529,7 @@ M.configure_highlights = function()
   hi(0, "TSCharacter", { fg = color.red })
   hi(0, "TSComment", { fg = color.comment, italic = true })
   hi(0, "GitSignsCurrentLineBlame", { fg = color.comment, italic = true })
-  hi(0, "TSConditional", { fg = color._60 })
+  hi(0, "TSConditional", { fg = color.burnt_orange })
   hi(0, "TSConstBuiltin", { fg = color.light_brown, italic = true })
   hi(0, "TSMethodCall", { fg = color._37 })
   hi(0, "TSFunctionCall", { fg = color._37 })
@@ -551,7 +549,7 @@ M.configure_highlights = function()
   hi(0, "TSFunction", { fg = color._58 })
   hi(0, "TSInclude", { fg = color.copper_brown })
   hi(0, "TSKeyword", { fg = color.burnt_orange })
-  hi(0, "TSKeywordFunction", { fg = color._59 })
+  hi(0, "TSKeywordFunction", { fg = color.burnt_orange })
   hi(0, "TSKeywordOperator", { fg = color.pale_gold })
   hi(0, "TSLabel", { fg = color._63 })
   hi(0, "TSLiteral", { fg = color.light_brown })
