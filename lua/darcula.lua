@@ -61,47 +61,30 @@ local color = {
   bright_yellow_green = "#e3e346",
   copper_brown = "#C07C41",
   deep_fuchsia = "#b33076",
-  _37 = "#AD9E7D",
+  lavender = "#9876AA",
+  deep_light_blue = "#51afef",
+  pale_taupe = "#AD9E7D",
+  olive_green = "#6A8759",
+  _52 = "#c95942",
+  _54 = "#bf4537",
+  _64 = "#89d957",
+  _70 = "#4dd158",
+  _66 = "#6FAFBD",
+  _71 = "#4B4E4F",
+  _74 = "#3C3F40",
   _38 = "#881515",
   _39 = "#73797e",
-  _40 = "#66eeff",
-  _29 = "#51afef",
-  _41 = "#666666",
-  _42 = "#323232",
-  _43 = "#262626",
-  _44 = "#008000",
-  _45 = "#ffffff",
-  _46 = "#ff007c",
   _47 = "#f7bb3b",
-  _48 = "#e8e8e8",
-  _49 = "#da8548",
   _50 = "#d1d4cf",
-  _51 = "#cf80ce",
-  _52 = "#c95942",
   _53 = "#c955ae",
-  _54 = "#bf4537",
   _55 = "#b8733e",
   _56 = "#afd700",
   _57 = "#ad475f",
   _58 = "#FFC66D",
   _61 = "#AFBF7E",
-  _62 = "#9876AA",
-  _63 = "#9377A7",
-  _64 = "#89d957",
-  _65 = "#754a81",
-  _66 = "#6FAFBD",
-  _67 = "#6A8759",
   _68 = "#6897BB",
-  _69 = "#52ad70",
-  _70 = "#4dd158",
-  _71 = "#4B4E4F",
   _72 = "#4682b4",
-  _74 = "#3C3F40",
   _75 = "#392a52",
-  _76 = "#344f69",
-  _77 = "#2f7366",
-  _78 = "#2f628e",
-  _79 = "#2e5049",
   _82 = "#151838",
 }
 
@@ -271,11 +254,6 @@ M.configure_highlights = function()
   hi(0, "Conditional", { fg = color.pale_gold })
 
   -- conflict-marker.vim
-  hi(0, "ConflictMarkerBegin", { bg = color._77 })
-  hi(0, "ConflictMarkerCommonAncestorsHunk", { bg = color._65 })
-  hi(0, "ConflictMarkerEnd", { bg = color._78 })
-  hi(0, "ConflictMarkerOurs", { bg = color._79 })
-  hi(0, "ConflictMarkerTheirs", { bg = color._76 })
   hi(0, "Constant", { ctermfg = 13, fg = color.light_brown })
 
   -- copilot.vim
@@ -332,7 +310,7 @@ M.configure_highlights = function()
   hi(0, "DiagnosticHint", { ctermfg = 7, fg = color.bright_sky })
   hi(0, "DiagnosticInfo", { ctermfg = 4, fg = color.grey })
   hi(0, "DiagnosticLineCol", { fg = color._39 })
-  hi(0, "DiagnosticMap", { fg = color._51 })
+  hi(0, "DiagnosticMap", { fg = color.light_lavender })
   hi(0, "DiagnosticQuickFix", { bold = true, fg = color._70 })
   hi(0, "DiagnosticUnderlineError", { sp = color.red, undercurl = true })
   hi(0, "DiagnosticUnderlineHint", { sp = color.bright_sky, undercurl = true })
@@ -358,7 +336,7 @@ M.configure_highlights = function()
   hi(0, "EyelinerSecondary", { fg = color.pale_gold })
   hi(0, "FinderParam", { bg = color._75, bold = true, fg = color.light_lavender })
   hi(0, "FinderSpinner", { bold = true, fg = color.deep_fuchsia })
-  hi(0, "FinderSpinnerBorder", { fg = color._29 })
+  hi(0, "FinderSpinnerBorder", { fg = color.deep_light_blue })
   hi(0, "FinderSpinnerTitle", { bold = true, fg = color.deep_fuchsia })
   hi(0, "FinderVirtText", { fg = color._52 })
   hi(0, "Float", { fg = color.light_brown })
@@ -375,20 +353,20 @@ M.configure_highlights = function()
   hi(0, "GitSignsStagedAddLn", { bg = color.dark, fg = color.green })
   hi(0, "GitSignsStagedAddNr", { bg = color.dark, fg = color.green })
   hi(0, "GitSignsStagedChange", { bg = color.dark, fg = color.steel_blue })
-  hi(0, "GitSignsStagedChangeLn", { bg = color.dark, fg = color._43 })
+  hi(0, "GitSignsStagedChangeLn", { bg = color.dark, fg = color.very_dark_gray })
   hi(0, "GitSignsStagedChangeNr", { bg = color.dark, fg = color.steel_blue })
   hi(0, "GitSignsStagedChangedelete", { bg = color.dark, fg = color.steel_blue })
-  hi(0, "GitSignsStagedChangedeleteLn", { bg = color.dark, fg = color._43 })
+  hi(0, "GitSignsStagedChangedeleteLn", { bg = color.dark, fg = color.very_dark_gray })
   hi(0, "GitSignsStagedChangedeleteNr", { bg = color.dark, fg = color.steel_blue })
   hi(0, "GitSignsStagedDelete", { bg = color.dark, fg = color.dark_maroon })
   hi(0, "GitSignsStagedDeleteNr", { bg = color.dark, fg = color.dark_maroon })
   hi(0, "GitSignsStagedTopdelete", { bg = color.dark, fg = color.dark_maroon })
   hi(0, "GitSignsStagedTopdeleteNr", { bg = color.dark, fg = color.dark_maroon })
-  hi(0, "HopNextKey", { bold = true, ctermfg = 198, fg = color._46 })
+  hi(0, "HopNextKey", { bold = true, ctermfg = 198, fg = color.bright_pink })
   hi(0, "HopNextKey1", { bold = true, ctermfg = 45, fg = color.bright_cyan })
   hi(0, "HopNextKey2", { ctermfg = 33, fg = color.bright_cyan })
   hi(0, "HopPreview", { link = "IncSearch" })
-  hi(0, "HopUnmatched", { ctermfg = 242, fg = color._41, sp = color._41 })
+  hi(0, "HopUnmatched", { ctermfg = 242, fg = color.slate_gray, sp = color.slate_gray })
   hi(0, "Identifier", { ctermfg = 14, fg = color.red })
   hi(0, "Ignore", { ctermfg = 0, fg = color.dark })
   -- hi(0, "IlluminatedWordRead", { sp = color._09, underline = true })
@@ -404,7 +382,7 @@ M.configure_highlights = function()
   hi(0, "IndentBlanklineSpaceChar", { ctermfg = 12, fg = color.medium_gray, nocombine = true })
   hi(0, "IndentBlanklineSpaceCharBlankline", { ctermfg = 12, fg = color.medium_gray, nocombine = true })
   hi(0, "Keyword", { fg = color.pale_gold })
-  hi(0, "LSOutlinePreviewBorder", { fg = color._69 })
+  hi(0, "LSOutlinePreviewBorder", { fg = color.green })
   hi(0, "Label", { fg = color.golden_yellow })
   hi(0, "LineNr", { ctermfg = 11, fg = color.silver_gray })
   hi(0, "LspDiagnosticsDefaultError", { link = "DiagnosticError" })
@@ -418,15 +396,15 @@ M.configure_highlights = function()
   hi(0, "LspReferenceRead", { sp = color.silver_gray, underline = true })
   hi(0, "LspReferenceText", { sp = color.silver_gray, underline = true })
   hi(0, "LspReferenceWrite", { sp = color.silver_gray, underline = true })
-  hi(0, "LspSagaAutoPreview", { fg = color._29 })
+  hi(0, "LspSagaAutoPreview", { fg = color.deep_light_blue })
   hi(0, "LspSagaCodeActionBorder", { fg = color.light_lavender })
   hi(0, "LspSagaCodeActionContent", { bold = true, fg = color.green })
-  hi(0, "LspSagaCodeActionTitle", { bold = true, fg = color._49 })
+  hi(0, "LspSagaCodeActionTitle", { bold = true, fg = color.burnt_orange })
   hi(0, "LspSagaDiagnosticBorder", { fg = color.light_lavender })
   hi(0, "LspSagaDiagnosticHeader", { fg = color._56 })
   hi(0, "LspSagaFinderSelection", { bold = true, fg = color._64 })
   hi(0, "LspSagaHoverBorder", { fg = color._47 })
-  hi(0, "LspSagaLspFinderBorder", { fg = color._29 })
+  hi(0, "LspSagaLspFinderBorder", { fg = color.deep_light_blue })
   hi(0, "LspSagaRenameBorder", { fg = color.bright_cyan })
   hi(0, "LspSagaSignatureHelpBorder", { fg = color.green })
   hi(0, "Macro", { fg = color.red })
@@ -481,8 +459,8 @@ M.configure_highlights = function()
   hi(0, "ScrollbarCursorHandle", { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color.grey })
   hi(0, "ScrollbarError", { ctermfg = 0, fg = color.red })
   hi(0, "ScrollbarErrorHandle", { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color.red })
-  hi(0, "ScrollbarGitAdd", { ctermfg = 0, fg = color._44 })
-  hi(0, "ScrollbarGitAddHandle", { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color._44 })
+  hi(0, "ScrollbarGitAdd", { ctermfg = 0, fg = color.green })
+  hi(0, "ScrollbarGitAddHandle", { bg = color.background, ctermbg = 15, ctermfg = 0, fg = color.green })
   hi(0, "ScrollbarGitChange", { ctermfg = 0, fg = color.bright_yellow_green })
   hi(
     0,
@@ -505,9 +483,9 @@ M.configure_highlights = function()
   hi(0, "Search", { bg = color.golden_yellow, ctermbg = 11, ctermfg = 0, fg = color.background })
   hi(0, "SignColumn", { ctermbg = 242, ctermfg = 14, fg = color.silver_gray })
   hi(0, "SniprunFloatingWinErr", { ctermfg = 1, fg = color._38 })
-  hi(0, "SniprunFloatingWinOk", { ctermfg = 14, fg = color._40 })
+  hi(0, "SniprunFloatingWinOk", { ctermfg = 14, fg = color.bright_cyan })
   hi(0, "SniprunVirtualTextErr", { bg = color._38, ctermbg = 1, fg = color.dark })
-  hi(0, "SniprunVirtualTextOk", { bg = color._40, ctermbg = 14, fg = color.dark })
+  hi(0, "SniprunVirtualTextOk", { bg = color.bright_cyan, ctermbg = 14, fg = color.dark })
   hi(0, "Special", { ctermfg = 224, fg = color.bright_sky })
   hi(0, "SpecialChar", { fg = color.light_brown })
   hi(0, "SpecialKey", { ctermfg = 81, fg = color.medium_gray })
@@ -531,10 +509,10 @@ M.configure_highlights = function()
   hi(0, "GitSignsCurrentLineBlame", { fg = color.comment, italic = true })
   hi(0, "TSConditional", { fg = color.burnt_orange })
   hi(0, "TSConstBuiltin", { fg = color.light_brown, italic = true })
-  hi(0, "TSMethodCall", { fg = color._37 })
-  hi(0, "TSFunctionCall", { fg = color._37 })
+  hi(0, "TSMethodCall", { fg = color.pale_taupe })
+  hi(0, "TSFunctionCall", { fg = color.pale_taupe })
   hi(0, "TSConstMacro", { fg = color.red })
-  hi(0, "TSConstant", { fg = color._62 })
+  hi(0, "TSConstant", { fg = color.lavender })
   hi(0, "TSConstructor", { fg = color.light_blue })
   hi(0, "TSCurrentScope", { bold = true })
   hi(0, "TSDefinition", { sp = color.silver_gray, underline = true })
@@ -551,7 +529,7 @@ M.configure_highlights = function()
   hi(0, "TSKeyword", { fg = color.burnt_orange })
   hi(0, "TSKeywordFunction", { fg = color.burnt_orange })
   hi(0, "TSKeywordOperator", { fg = color.pale_gold })
-  hi(0, "TSLabel", { fg = color._63 })
+  hi(0, "TSLabel", { fg = color.lavender })
   hi(0, "TSLiteral", { fg = color.light_brown })
   hi(0, "TSMethod", { fg = color.pale_gold })
   hi(0, "TSNamespace", { fg = color._61 })
@@ -567,7 +545,7 @@ M.configure_highlights = function()
   hi(0, "TSPunctSpecial", { fg = color.grey })
   hi(0, "TSRepeat", { fg = color.pale_gold })
   hi(0, "TSStrike", { fg = color.dark, strikethrough = true })
-  hi(0, "TSString", { fg = color._67 })
+  hi(0, "TSString", { fg = color.olive_green })
   hi(0, "TSStringEscape", { fg = color.bright_sky })
   hi(0, "TSStringRegex", { fg = color.bright_sky })
   hi(0, "TSStrong", { bold = true })
@@ -593,11 +571,11 @@ M.configure_highlights = function()
   hi(0, "TelescopeBorder", { bg = color.very_dark_gray, fg = color.very_dark_gray })
   hi(0, "TelescopeNormal", { bg = color.very_dark_gray })
   hi(0, "TelescopePreviewLine", { bg = color.background })
-  hi(0, "TelescopePreviewTitle", { bg = color.light_olive_green, fg = color._42 })
+  hi(0, "TelescopePreviewTitle", { bg = color.light_olive_green, fg = color.very_dark_gray })
   hi(0, "TelescopePromptBorder", { bg = color.dark_charcoal_gray, fg = color.dark_charcoal_gray })
   hi(0, "TelescopePromptNormal", { bg = color.dark_charcoal_gray, fg = color.grey })
   hi(0, "TelescopePromptPrefix", { bg = color.dark_charcoal_gray, fg = color.red })
-  hi(0, "TelescopePromptTitle", { bg = color.red, fg = color._42 })
+  hi(0, "TelescopePromptTitle", { bg = color.red, fg = color.very_dark_gray })
   hi(0, "TelescopeResultsTitle", { bg = color.very_dark_gray, fg = color.very_dark_gray })
   hi(0, "TelescopeSelection", { bg = color.dark_charcoal_gray })
   hi(0, "TermCursor", { bg = color.very_light_gray, fg = color.dark })
@@ -640,7 +618,7 @@ M.configure_highlights = function()
   hi(0, "gitcommitUnmergedType", { fg = color.light_blue })
   hi(0, "gitcommitUntracked", { fg = color.medium_gray })
   hi(0, "gitcommitUntrackedFile", { fg = color.golden_yellow })
-  hi(0, "iCursor", { bg = color._72, fg = color._45 })
+  hi(0, "iCursor", { bg = color._72, fg = color.very_light_gray })
   hi(0, "lCursor", { bg = color.very_light_gray, fg = color.dark })
 
   -- lualine.nvim
@@ -727,7 +705,7 @@ M.configure_highlights = function()
   hi(0, "lualine_x_filetype_DevIconDefault_visual", { bg = color.green, fg = color.slate_gray })
 
   -- nvim-ts-rainbow
-  hi(0, "rainbowcol1", { fg = color._48 })
+  hi(0, "rainbowcol1", { fg = color.very_light_gray })
   hi(0, "rainbowcol2", { fg = color.light_brown })
   hi(0, "rainbowcol3", { fg = color.golden_yellow })
   hi(0, "rainbowcol4", { fg = color.very_light_gray })
