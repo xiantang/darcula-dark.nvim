@@ -30,12 +30,13 @@ if you want to customize darcula-dark:
 like disabling integrated plugins
 
 ```lua
-{
-    "xiantang/darcula-dark.nvim",
-    config = function()
-        -- setup must be called before loading
-        require("darcula").setup({
-            opt = {
+return {
+	{
+		"xiantang/darcula-dark.nvim",
+		config = function()
+			-- setup must be called before loading
+			require("darcula").setup({
+				opt = {
 					integrations = {
 						telescope = false,
 						lualine = true,
@@ -43,10 +44,11 @@ like disabling integrated plugins
 						nvim_cmp = true,
 						dap_nvim = true,
 					},
-            },
-        })
-    end,
-},
+				},
+			})
+		end,
+	},
+}
 
 ```
 
