@@ -36,9 +36,13 @@ like disabling integrated plugins
         -- setup must be called before loading
         require("darcula").setup({
             opt = {
-                integrations = {
-                    telescope = false,
-                },
+					integrations = {
+						telescope = false,
+						lualine = true,
+						lsp_semantics_token = true,
+						nvim_cmp = true,
+						dap_nvim = true,
+					},
             },
         })
     end,
