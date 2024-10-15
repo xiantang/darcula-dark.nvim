@@ -25,6 +25,28 @@ lazy.nvim
 }
 ```
 
+
+if you want to customize darcula-dark:
+like disabling integrated plugins
+
+```lua
+{
+    "xiantang/darcula-dark.nvim",
+    config = function()
+        -- setup must be called before loading
+        require("darcula").setup({
+            opt = {
+                integrations = {
+                    telescope = false,
+                },
+            },
+        })
+    end,
+},
+
+```
+
+
 packer.nvim
 
 ```lua
