@@ -36,6 +36,12 @@ return {
 		config = function()
 			-- setup must be called before loading
 			require("darcula").setup({
+				override = function(c)
+					return {
+						background = "#333333",
+						dark = "#000000"
+					}
+				end,
 				opt = {
 					integrations = {
 						telescope = false,

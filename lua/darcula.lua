@@ -17,27 +17,6 @@ local M = {}
 ---@type Config
 M.config = config
 
----@param args Config?
--- you can define your setup function here. Usually configurations can be merged, accepting outside params and
--- you can also put some validation here for those.
-M.setup = function(args)
-  M.config = vim.tbl_deep_extend("force", M.config, args or {})
-  if vim.g.colors_name ~= nil then
-    vim.cmd("highlight clear")
-  end
-
-  -- neovim version should be higher than 0.8.3
-  if vim.fn.has("nvim-0.8.3") == 0 then
-    vim.cmd(
-      "echohl WarningMsg | echo 'Your neovim version is lower than 0.8.3, some features may not work correctly!' | echohl None"
-    )
-  end
-
-  vim.g.colors_name = "darcula-dark"
-  vim.o.termguicolors = true
-  M.configure_highlights()
-end
-
 local color = {
   green = "#98be65",
   red = "#f43753",
@@ -96,6 +75,32 @@ local color = {
   _75 = "#392a52",
   _82 = "#151838",
 }
+
+---@param args Config?
+-- you can define your setup function here. Usually configurations can be merged, accepting outside params and
+-- you can also put some validation here for those.
+M.setup = function(args)
+  M.config = vim.tbl_deep_extend("force", M.config, args or {})
+  if vim.g.colors_name ~= nil then
+    vim.cmd("highlight clear")
+  end
+
+  if args and type(args.override) == "function" then
+    c = args.override(color)
+    color = vim.tbl_deep_extend("force", color, c)
+  end
+
+  -- neovim version should be higher than 0.8.3
+  if vim.fn.has("nvim-0.8.3") == 0 then
+    vim.cmd(
+      "echohl WarningMsg | echo 'Your neovim version is lower than 0.8.3, some features may not work correctly!' | echohl None"
+    )
+  end
+
+  vim.g.colors_name = "darcula-dark"
+  vim.o.termguicolors = true
+  M.configure_highlights()
+end
 
 M.configure_highlights = function()
   -- colors
