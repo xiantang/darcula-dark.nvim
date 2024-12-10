@@ -196,6 +196,8 @@ M.configure_highlights = function()
     hi(0, "@lsp.typemod.variable.defaultLibrary", { link = "TSKeyword" })
     hi(0, "@lsp.mod.defaultLibrary.go", { link = "TSKeyword" })
     hi(0, "@lsp.type.property", { link = "TSField" })
+    hi(0, "@tag.attribute.tsx", { link = "TSParameter" })
+    hi(0, "@tag.attribute.javascript", { link = "TSParameter" })
   end
 
   hi(0, "Bold", { bold = true })
