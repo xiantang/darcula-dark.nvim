@@ -771,6 +771,34 @@ M.configure_highlights = function()
   g.terminal_color_13 = color.pale_gold
   g.terminal_color_14 = color.bright_sky
   g.terminal_color_15 = color.very_light_gray
+
+  -- Snacks Dashboard
+  hi(0, "SnacksDashboardHeader", { fg = color.golden_yellow, bold = true })
+  hi(0, "SnacksDashboardTitle", { fg = color.pale_gold, bold = true })
+  hi(0, "SnacksDashboardIcon", { fg = color.light_blue })
+  hi(0, "SnacksDashboardDesc", { fg = color.light_slate_gray })
+  hi(0, "SnacksDashboardFile", { fg = color.pale_gold, bold = true })
+  hi(0, "SnacksDashboardKey", { fg = color.burnt_orange })
+  hi(0, "SnacksDashboardSpecial", { fg = color.light_slate_gray })
+  hi(0, "SnacksDashboardDir", { fg = color.light_slate_gray })
+  hi(0, "SnacksDashboardNormal", { fg = color.light_slate_gray })
+  hi(0, "SnacksDashboardTerminal", { fg = color.light_slate_gray })
+  hi(0, "SnacksDashboardFooter", { fg = color.light_slate_gray })
+
+  -- Neo-Tree
+  hi(0, "NeoTreeFileName", { fg = color.light_slate_gray })
+  hi(0, "NeoTreeDotfile", { fg = color.comment })
+  hi(0, "NeoTreeDirectoryName", { fg = color.pale_gold })
+  hi(0, "NeoTreeDirectoryIcon", { fg = color.pale_gold })
+  hi(0, "NeoTreeGitModified", { fg = color.burnt_orange })
+  hi(0, "NeoTreeGitStaged", { fg = color.olive_green })
+  hi(0, "NeoTreeGitUntracked", { fg = color.lavender })
+  hi(0, "NeoTreeNormal", { fg = color.light_slate_gray, bg = color.very_dark_gray })
+  hi(0, "NeoTreeNormalNC", { fg = color.light_slate_gray, bg = color.very_dark_gray })
+  hi(0, "NeoTreeTabActive", { fg = color.light_slate_gray, bg = color.very_dark_gray, bold = true })
+  hi(0, "NeoTreeTabInactive", { fg = color.dark_grey, bg = color.very_dark_gray })
+  hi(0, "NeoTreeTabSeparatorActive", { fg = color.light_slate_gray, bg = color.very_dark_gray })
+  hi(0, "NeoTreeTabSeparatorInactive", { fg = color.light_slate_gray, bg = color.dark_grey })
 end
 
 return M
