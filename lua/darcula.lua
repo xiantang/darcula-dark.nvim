@@ -3,6 +3,7 @@ local config = {
   opt = {
     integrations = {
       telescope = true,
+      snacks = true,
       lualine = true,
       lsp_semantics_token = true,
       nvim_cmp = true,
@@ -348,6 +349,12 @@ M.configure_highlights = function()
   -- hi(0, "DiffRemoved", { fg = color.red })
   -- hi(0, "DiffText", { bold = true, ctermbg = 9, fg = color.light_blue })
   hi(0, "Directory", { ctermfg = 159, fg = color.light_blue })
+  if M.config.opt.integrations.snacks then
+    local dir_hl = vim.api.nvim_get_hl(0, { name = "Directory", link = false })
+    local fg = dir_hl.fg or color.bright_sky
+    hi(0, "SnacksPickerDirectory", { fg = fg, bold = true })
+    hi(0, "SnacksPickerDir", { fg = fg })
+  end
   hi(0, "Error", { bg = color.red, ctermbg = 9, ctermfg = 15, fg = color.dark })
   hi(0, "ErrorMsg", { ctermbg = 1, ctermfg = 15, fg = color.red })
   hi(0, "Exception", { fg = color.red })

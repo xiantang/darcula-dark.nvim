@@ -45,6 +45,7 @@ return {
 				opt = {
 					integrations = {
 						telescope = false,
+						snacks = true,
 						lualine = true,
 						lsp_semantics_token = true,
 						nvim_cmp = true,
@@ -89,6 +90,7 @@ Supported Plugins
 * lspsaga.nvim
 * scrollbar.nvim
 * lualine.nvim
+* snacks.nvim
 
 Usage
 ------------
