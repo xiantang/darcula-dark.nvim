@@ -198,9 +198,74 @@ colorscheme dracula
 
 This color scheme requires Neovim v0.8.3 or higher, as it uses LSP Semantic tokens. It also depends on nvim-treesitter/nvim-treesitter.
 
+## Health Check
+
+Run `:checkhealth darcula` to verify your setup and troubleshoot any issues:
+
+```vim
+:checkhealth darcula
+```
+
+The health check will verify:
+- ✅ Neovim version compatibility (>= 0.8.3)
+- ✅ True color (24-bit) support detection
+- ✅ Terminal configuration ($TERM, $COLORTERM)
+- ✅ `termguicolors` setting
+- ✅ Required dependencies (nvim-treesitter)
+- ✅ Theme loading status
+- 💡 Terminal-specific configuration advice (tmux, alacritty, kitty, etc.)
+
+### Auto-fix for termguicolors
+
+If the health check reports that `termguicolors` is not enabled, you can:
+
+**Temporary fix (current session):**
+```vim
+:lua vim.o.termguicolors = true
+```
+
+**Permanent fix - add to your config:**
+
+Lua (`init.lua`):
+```lua
+vim.o.termguicolors = true
+```
+
+VimScript (`init.vim`):
+```vim
+set termguicolors
+```
+
 ## Troubleshooting
 
-Make sure your terminal supports true color: https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
+If you're experiencing color issues:
+
+1. **Run the health check first**: `:checkhealth darcula`
+2. **Test your terminal's true color support**: 
+   ```bash
+   curl -s https://gist.githubusercontent.com/lifepillar/09a44b8cf0f9397465614e622979107f/raw/24-bit-color.sh | bash
+   ```
+   You should see smooth color gradients. If not, your terminal needs configuration.
+
+3. **Common issues and solutions**:
+   - **Colors look wrong**: Enable `termguicolors` (see health check)
+   - **Using tmux**: Add to `~/.tmux.conf`:
+     ```bash
+     set -g default-terminal "tmux-256color"
+     set -ag terminal-overrides ",xterm-256color:RGB"
+     ```
+   - **Using Alacritty**: Add to `alacritty.yml`:
+     ```yaml
+     env:
+       TERM: xterm-256color
+     ```
+     Or `alacritty.toml`:
+     ```toml
+     [env]
+     TERM = "xterm-256color"
+     ```
+
+4. **Complete terminal setup guide**: https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
 
 ## Alternatives
 

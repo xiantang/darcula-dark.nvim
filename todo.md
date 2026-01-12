@@ -2,3 +2,4 @@
 - [x] Agent.md
 - [x] Support color can be configured by yaml or json
 - [x] support https://spec.draculatheme.com/
+- [ ] true color detect health check
