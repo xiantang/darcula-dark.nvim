@@ -1,0 +1,159 @@
+*darcula-dark.txt*       For Neovim >= 0.8.3      Last change: 2026 January 12
+
+==============================================================================
+Table of Contents                             *darcula-dark-table-of-contents*
+
+1. ‍ Darcula Dark for Neovim      |darcula-dark-‍-darcula-dark-for-neovim|
+  - Installation       |darcula-dark-‍-darcula-dark-for-neovim-installation|
+  - TODO                       |darcula-dark-‍-darcula-dark-for-neovim-todo|
+  - Supported Plugins|darcula-dark-‍-darcula-dark-for-neovim-supported-plugins|
+  - Usage                     |darcula-dark-‍-darcula-dark-for-neovim-usage|
+  - Requirements       |darcula-dark-‍-darcula-dark-for-neovim-requirements|
+  - Troubleshooting |darcula-dark-‍-darcula-dark-for-neovim-troubleshooting|
+  - Alternatives       |darcula-dark-‍-darcula-dark-for-neovim-alternatives|
+  - Credits                 |darcula-dark-‍-darcula-dark-for-neovim-credits|
+2. Links                                                  |darcula-dark-links|
+
+==============================================================================
+1. ‍ Darcula Dark for Neovim      *darcula-dark-‍-darcula-dark-for-neovim*
+
+The Darcula Dark theme is a Neovim colorscheme that’s designed to emulate the
+popular Darcula color scheme from JetBrains’ GoLand IDE. It is ideal for long
+hours of coding, offering a dark theme that’s easy on the eyes. Despite
+trying various alternatives in Neovim, we found nothing quite matched up, hence
+we embarked on creating this color scheme ourselves.
+
+comparing with the original Darcula theme in GoLand:
+
+
+INSTALLATION           *darcula-dark-‍-darcula-dark-for-neovim-installation*
+
+To install this color scheme, add the following to your plugin configuration:
+
+
+LAZY.NVIM ~
+
+>lua
+    {
+        "xiantang/darcula-dark.nvim",
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+        },
+    }
+<
+
+if you want to customize darcula-dark: like disabling integrated plugins
+
+>lua
+    return {
+        {
+            "xiantang/darcula-dark.nvim",
+            config = function()
+                -- setup must be called before loading
+                require("darcula").setup({
+                    override = function(c)
+                        return {
+                            background = "#333333",
+                            dark = "#000000"
+                        }
+                    end,
+                    opt = {
+                        integrations = {
+                            telescope = false,
+                            snacks = true,
+                            lualine = true,
+                            lsp_semantics_token = true,
+                            nvim_cmp = true,
+                            dap_nvim = true,
+                        },
+                    },
+                })
+            end,
+        },
+    }
+<
+
+
+PACKER.NVIM ~
+
+>lua
+      use {
+        'xiantang/darcula-dark.nvim',
+        requires = {"nvim-treesitter/nvim-treesitter"}
+      }
+<
+
+
+TODO                           *darcula-dark-‍-darcula-dark-for-neovim-todo*
+
+- support Darcula Solid Theme https://plugins.jetbrains.com/plugin/13920-darcula-solid-theme
+- support more plugins
+
+
+SUPPORTED PLUGINS *darcula-dark-‍-darcula-dark-for-neovim-supported-plugins*
+
+- telescope
+- Treesitter
+- cmp-nvim
+- copilot.vim
+- dap.nvim
+- eyeline.nvim
+- gitsign.nvim
+- hop.nvim
+- nerdtree.vim
+- lspsaga.nvim
+- scrollbar.nvim
+- lualine.nvim
+- snacks.nvim
+
+
+USAGE                         *darcula-dark-‍-darcula-dark-for-neovim-usage*
+
+
+LUA ~
+
+>lua
+    vim.cmd.colorscheme("darcula-dark")
+<
+
+
+VIMSCRIPT ~
+
+>vimscript
+    colorscheme darcula-dark
+<
+
+
+REQUIREMENTS           *darcula-dark-‍-darcula-dark-for-neovim-requirements*
+
+This color scheme requires Neovim v0.8.3 or higher, as it uses LSP Semantic
+tokens. It also depends on nvim-treesitter/nvim-treesitter.
+
+
+TROUBLESHOOTING     *darcula-dark-‍-darcula-dark-for-neovim-troubleshooting*
+
+Make sure your terminal supports true color:
+https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6
+
+
+ALTERNATIVES           *darcula-dark-‍-darcula-dark-for-neovim-alternatives*
+
+- doums/darcula <https://github.com/doums/darcula>
+- santos-gabriel-dario/darcula-solid.nvim <https://github.com/santos-gabriel-dario/darcula-solid.nvim>
+
+
+CREDITS                     *darcula-dark-‍-darcula-dark-for-neovim-credits*
+
+- Darcula Darker Theme from JetBrains <https://plugins.jetbrains.com/plugin/12692-darcula-darker-theme>
+- Neovim Plugin Template by ellisonleao <https://github.com/ellisonleao/nvim-plugin-template>
+- nvim-base16 <https://github.com/RRethy/nvim-base16>
+
+==============================================================================
+2. Links                                                  *darcula-dark-links*
+
+1. *image*: https://github.com/xiantang/darcula-dark.nvim/blob/main/img/preview.png?raw=true
+2. *image*: https://github.com/xiantang/darcula-dark.nvim/blob/main/img/256969805-1d3f86f1-3692-4267-a113-56a76be67e99.png?raw=true
+
+Generated by panvimdoc <https://github.com/kdheepak/panvimdoc>
+
+vim:tw=78:ts=8:noet:ft=help:norl:
