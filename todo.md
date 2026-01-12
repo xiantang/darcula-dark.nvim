@@ -1,2 +1,3 @@
-- [ ] genreate vim help
+- [x] genreate vim help
 - [x] Agent.md
+- [ ] Support color can be configured by yaml or json
