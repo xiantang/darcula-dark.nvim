@@ -75,6 +75,11 @@ require("darcula").setup({
 	theme = "darcula"  -- loads built-in colors/themes/darcula.json
 })
 
+-- Use Darcula Solid theme (darker backgrounds, flatter UI)
+require("darcula").setup({
+	theme = "darcula-solid"  -- loads built-in colors/themes/darcula-solid.json
+})
+
 -- Or load from custom path
 require("darcula").setup({
 	theme = "~/.config/nvim/themes/my-darcula.json"
@@ -129,8 +134,13 @@ See the full list in `colors/themes/darcula.json`
 
 ```
 
+## Built-in Themes
+
+* **darcula** - The original Darcula theme (default)
+* **darcula-solid** - Darcula Solid theme with darker backgrounds and flatter UI
+
 ## TODO
-- [ ] support Darcula Solid Theme https://plugins.jetbrains.com/plugin/13920-darcula-solid-theme
+- [x] support Darcula Solid Theme https://plugins.jetbrains.com/plugin/13920-darcula-solid-theme
 - [ ] support more plugins
 
 ## Supported Plugins
@@ -154,14 +164,21 @@ See the full list in `colors/themes/darcula.json`
 ### Lua
 
 ```lua
+-- Use default Darcula theme
 vim.cmd.colorscheme("darcula-dark")
 
+-- Use Darcula Solid theme
+vim.cmd.colorscheme("darcula-solid")
 ```
 
 ### VimScript
 
 ```vimscript
+" Use default Darcula theme
 colorscheme darcula-dark
+
+" Use Darcula Solid theme
+colorscheme darcula-solid
 ```
 
 ## Requirements
