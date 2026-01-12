@@ -1,3 +1,4 @@
 - [x] genreate vim help
 - [x] Agent.md
-- [ ] Support color can be configured by yaml or json
+- [x] Support color can be configured by yaml or json
+- [x] support https://spec.draculatheme.com/
