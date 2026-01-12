@@ -1,0 +1,13 @@
+{
+  "name": "darcula-darker",
+  "version": "1.0.0",
+  "author": "example",
+  "description": "A darker variant of Darcula theme - example custom theme",
+  "colors": {
+    "dark": "#1E1E1E",
+    "background": "#2D2D2D",
+    "very_dark_gray": "#161616",
+    "dark_charcoal_gray": "#303030",
+    "comment": "#6A6A6A"
+  }
+}

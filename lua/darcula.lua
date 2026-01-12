@@ -1,4 +1,7 @@
 ---@class Config
+---@field theme? string Theme name or path to theme JSON file
+---@field override? fun(colors: table): table Function to override colors
+---@field opt table Plugin integration options
 local config = {
   opt = {
     integrations = {
@@ -18,65 +21,6 @@ local M = {}
 ---@type Config
 M.config = config
 
-local color = {
-  green = "#98be65",
-  red = "#f43753",
-  grey = "#C9D0D3",
-  light_blue = "#b3deef",
-  background = "#383838",
-  pale_gold = "#d3b987",
-  dark = "#2B2B2B",
-  bright_sky = "#73cef4",
-  golden_yellow = "#ffc24b",
-  light_olive_green = "#c9d05c",
-  medium_gray = "#4c4c4c",
-  light_brown = "#dc9656",
-  silver_gray = "#b8b8b8",
-  bright_cyan = "#00f1f5",
-  light_slate_gray = "#abb2bf",
-  dark_grey = "#484848",
-  comment = "#808080",
-  light_lime_green = "#a9ff68",
-  peach_orange = "#ff9e64",
-  slate_gray = "#6d8086",
-  light_lavender = "#cba6f7",
-  very_light_gray = "#eeeeee",
-  dark_charcoal_gray = "#404040",
-  very_dark_gray = "#242424",
-  bright_pink = "#f70067",
-  burnt_orange = "#CC7832",
-  dark_maroon = "#7a1b29",
-  steel_blue = "#596f77",
-  bright_yellow_green = "#e3e346",
-  copper_brown = "#C07C41",
-  deep_fuchsia = "#b33076",
-  lavender = "#9876AA",
-  deep_light_blue = "#51afef",
-  pale_taupe = "#AD9E7D",
-  olive_green = "#6A8759",
-  _52 = "#c95942",
-  _54 = "#bf4537",
-  _64 = "#89d957",
-  _70 = "#4dd158",
-  _66 = "#6FAFBD",
-  _71 = "#4B4E4F",
-  _74 = "#3C3F40",
-  _38 = "#881515",
-  _39 = "#73797e",
-  _47 = "#f7bb3b",
-  _50 = "#d1d4cf",
-  _53 = "#c955ae",
-  _55 = "#b8733e",
-  _56 = "#afd700",
-  _57 = "#ad475f",
-  _58 = "#FFC66D",
-  _61 = "#AFBF7E",
-  _68 = "#6897BB",
-  _72 = "#4682b4",
-  _75 = "#392a52",
-  _82 = "#151838",
-}
-
 ---@param args Config?
 -- you can define your setup function here. Usually configurations can be merged, accepting outside params and
 -- you can also put some validation here for those.
@@ -86,8 +30,26 @@ M.setup = function(args)
     vim.cmd("highlight clear")
   end
 
+  -- Load colors from theme file or use defaults
+  local color
+  if args and args.theme then
+    local loader = require("darcula.theme_loader")
+    local loaded_colors, err = loader.load(args.theme)
+    if loaded_colors then
+      -- Merge loaded colors with defaults (allows partial themes)
+      local default_colors = require("darcula.default_colors")
+      color = vim.tbl_deep_extend("force", default_colors, loaded_colors)
+    else
+      vim.notify("darcula-dark: " .. err .. ", using default colors", vim.log.levels.WARN)
+      color = require("darcula.default_colors")
+    end
+  else
+    color = require("darcula.default_colors")
+  end
+
+  -- Apply override function if provided
   if args and type(args.override) == "function" then
-    c = args.override(color)
+    local c = args.override(color)
     color = vim.tbl_deep_extend("force", color, c)
   end
 
@@ -100,10 +62,11 @@ M.setup = function(args)
 
   vim.g.colors_name = "darcula-dark"
   vim.o.termguicolors = true
-  M.configure_highlights()
+  M.configure_highlights(color)
 end
 
-M.configure_highlights = function()
+---@param color table Color palette
+M.configure_highlights = function(color)
   -- colors
   -- Highlight groups
   local hi = vim.api.nvim_set_hl

@@ -24,8 +24,11 @@ To install this color scheme, add the following to your plugin configuration:
 ```
 
 
-if you want to customize darcula-dark:
-like disabling integrated plugins
+### Customization
+
+You can customize darcula-dark in several ways:
+
+#### Option 1: Disable plugin integrations
 
 ```lua
 return {
@@ -34,12 +37,6 @@ return {
 		config = function()
 			-- setup must be called before loading
 			require("darcula").setup({
-				override = function(c)
-					return {
-						background = "#333333",
-						dark = "#000000"
-					}
-				end,
 				opt = {
 					integrations = {
 						telescope = false,
@@ -54,8 +51,72 @@ return {
 		end,
 	},
 }
-
 ```
+
+#### Option 2: Override specific colors
+
+```lua
+require("darcula").setup({
+	override = function(c)
+		return {
+			background = "#333333",
+			dark = "#000000"
+		}
+	end,
+})
+```
+
+#### Option 3: Use custom theme file (NEW!)
+
+You can create your own theme JSON file and load it:
+
+```lua
+require("darcula").setup({
+	theme = "darcula"  -- loads built-in colors/themes/darcula.json
+})
+
+-- Or load from custom path
+require("darcula").setup({
+	theme = "~/.config/nvim/themes/my-darcula.json"
+})
+
+-- Combine theme with override
+require("darcula").setup({
+	theme = "darcula",
+	override = function(c)
+		return { background = "#1E1E1E" }
+	end
+})
+```
+
+### Creating Custom Themes
+
+You can create your own theme by making a JSON file with the following structure:
+
+```json
+{
+  "name": "my-custom-theme",
+  "version": "1.0.0",
+  "colors": {
+    "green": "#98be65",
+    "red": "#f43753",
+    "dark": "#2B2B2B",
+    ...
+  }
+}
+```
+
+**Key points:**
+- The `colors` object must contain color definitions in `#RRGGBB` hex format
+- You can define only the colors you want to override (partial themes are supported)
+- Missing colors will fall back to default values
+- See `colors/themes/darcula.json` for a complete reference of all available color names
+
+**Color names reference:**
+Primary colors: `green`, `red`, `grey`, `dark`, `background`, etc.
+See the full list in `colors/themes/darcula.json`
+
+
 
 
 ### packer.nvim
