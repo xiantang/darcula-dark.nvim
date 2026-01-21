@@ -75,7 +75,7 @@ return M
 | Modules | Single uppercase | `local M = {}` |
 | API shortcuts | Short lowercase | `local hi = vim.api.nvim_set_hl` |
 | Colors | `color.descriptive_name` | `color.burnt_orange` |
-| Legacy colors | `color._NN` | `color._58` (avoid adding new) |
+| Legacy colors | `color.<descriptive_name>` | `color.very_dark_gray` (avoid adding new) |
 
 ### Type Annotations
 Use LuaLS/EmmyLua annotations:
