@@ -1,4 +1,4 @@
-*darcula-dark.txt*       For Neovim >= 0.8.3      Last change: 2026 January 12
+*darcula-dark.txt*       For Neovim >= 0.8.3      Last change: 2026 January 21
 
 ==============================================================================
 Table of Contents                             *darcula-dark-table-of-contents*
