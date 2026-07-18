@@ -1,4 +1,5 @@
-*darcula-dark.txt*       For Neovim >= 0.8.3      Last change: 2026 January 21
+*darcula-dark.txt*
+                              For Neovim >= 0.8.3    Last change: 2026 July 18
 
 ==============================================================================
 Table of Contents                             *darcula-dark-table-of-contents*
@@ -291,20 +292,23 @@ configuration.
 
 - **Colors look wrong**: Enable `termguicolors` (see health check)
 - **Using tmux**: Add to `~/.tmux.conf`:
-    >bash
+
+>bash
         set -g default-terminal "tmux-256color"
         set -ag terminal-overrides ",xterm-256color:RGB"
-    <
+<
 - **Using Alacritty**: Add to `alacritty.yml`:
-    >yaml
+
+>yaml
         env:
           TERM: xterm-256color
-    <
+<
     Or `alacritty.toml`:
-    >toml
+
+>toml
         [env]
         TERM = "xterm-256color"
-    <
+<
 
 
 4. **Complete terminal setup guide**:
